@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Forecast from "./Pages/Forecast";
 import Home from "./Pages/Home";
 import { pages } from "./Pages/config";
