@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../../public/Assets/logo.png";
 import { pages } from "../../Pages/config";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -24,8 +25,9 @@ const Navbar = () => {
           <ul className="nav-links">
             <li>
               <a
-                href={pages.home}
+                onClick={() => navigate(pages.home)}
                 style={{
+                  cursor: "pointer",
                   color: location.pathname === pages.home ? "black" : "",
                 }}
               >
@@ -34,8 +36,9 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href={pages.forecast}
+                onClick={() => navigate(pages.forecast)}
                 style={{
+                  cursor: "pointer",
                   color: location.pathname === pages.forecast ? "black" : "",
                 }}
               >
@@ -44,8 +47,9 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href={pages.about}
+                onClick={() => navigate(pages.about)}
                 style={{
+                  cursor: "pointer",
                   color: location.pathname === pages.about ? "black" : "",
                 }}
               >
@@ -64,16 +68,20 @@ const Navbar = () => {
         <ul className="sidebar-links">
           <li>
             <a
-              href={pages.home}
-              style={{ color: location.pathname === pages.home ? "black" : "" }}
+              onClick={() => navigate(pages.home)}
+              style={{
+                cursor: "pointer",
+                color: location.pathname === pages.home ? "black" : "",
+              }}
             >
               Home
             </a>
           </li>
           <li>
             <a
-              href={pages.forecast}
+              onClick={() => navigate(pages.forecast)}
               style={{
+                cursor: "pointer",
                 color: location.pathname === pages.forecast ? "black" : "",
               }}
             >
@@ -82,8 +90,9 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href={pages.about}
+              onClick={() => navigate(pages.about)}
               style={{
+                cursor: "pointer",
                 color: location.pathname === pages.about ? "black" : "",
               }}
             >
