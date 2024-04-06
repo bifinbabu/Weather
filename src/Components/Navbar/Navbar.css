@@ -6,6 +6,12 @@
   /* background-color: #b5d3f9; */
   background: linear-gradient(to left, #2fa5ed, #b5d3f9, #ebeefb);
   color: #fff;
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 0; /* Align the navbar at the top */
+  left: 0; /* Align the navbar to the left */
+  width: 100%; /* Make the navbar take full width */
+  z-index: 1000; /* Ensure the navbar stays on top of other content */
+  margin-bottom: 500px;
 }
 
 .nav-logo {
